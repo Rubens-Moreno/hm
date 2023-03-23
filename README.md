@@ -2,6 +2,7 @@
 # hm: pacote para gerar data frame com valores de altura manométrica e vazão.
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/Rubens-Moreno/hm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Rubens-Moreno/hm/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 O objetivo do pacote hm é gerar uma tabela (data frame) com valores de altura manométrica e vazão. Estes valores, auxiliarão a compor uma curva característica de sistemas de irrigação.
