@@ -20,8 +20,7 @@
 #'
 #' @return hf Head loss in meters
 
-head_loss <- function(D, Q, L, RC=1e-6, v = 1.01e-6, g = 9.81, x1 = 0.06) {
-
+head_loss <- function(D, Q, L, RC = 1e-6, v = 1.01e-6, g = 9.81, x1 = 0.06) {
   # Reynolds number
   Re <- (4 * Q) / (pi * D * v)
 
@@ -30,7 +29,6 @@ head_loss <- function(D, Q, L, RC=1e-6, v = 1.01e-6, g = 9.81, x1 = 0.06) {
     f <- 64 / Re
     hf <- (16 * f * Q^2 * L) / (2 * g * pi^2 * D^5)
   } else {
-
     # Colebrook-White
     x1 <- (1 / x1)^0.5
     w <- (RC / (3.7 * D)) + ((2.51 * x1) / Re)
