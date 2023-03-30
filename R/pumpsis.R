@@ -9,7 +9,7 @@
 #' @examples
 #' Q_BC21_15 <- c(19.2, 18.2, 17.2, 16.0, 13.3, 9.9)
 #' Hm_BC21_15 <- c(9, 10, 11, 12, 14, 16)
-#' pumpsis(Q_BC21_15, Hm_BC21_15)
+#' curva_bomba <- pumpsis(Q_BC21_15, Hm_BC21_15)
 
 pumpsis <- function(q_bomba, hm_bomba) {
   df <- data.frame(q_bomba, hm_bomba)
@@ -18,3 +18,4 @@ pumpsis <- function(q_bomba, hm_bomba) {
     return(list(df, model))
 
   }
+
