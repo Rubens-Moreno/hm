@@ -2,7 +2,7 @@
 #'
 #' @param df Objeto resultado da funcao hmsis
 #'
-#' @return
+#' @return Um Plot da curva caracteristica do sistema
 #' @export
 #'
 #' @examples
@@ -21,3 +21,4 @@ plot.sistema <- function(df) {
     main = "Curva Caracteristica do Sistema"
   )
 }
+
