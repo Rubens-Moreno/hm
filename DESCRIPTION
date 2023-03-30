@@ -1,5 +1,5 @@
 Package: hm (futuro PumpR)
-Title: Recomenda motobombas adequadas para sistemas de irrigação.
+Title: Recomenda motobombas adequadas para sistemas de irrigacao.
 Version: 0.0.0.9000
 Authors@R: c(
     person(given = "Joao B.",
@@ -8,16 +8,16 @@ Authors@R: c(
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-1303-4202")),
     person(given = "Rubens M.",
-           family = "Simões",
+           family = "Simoes",
            email = "rubens.moreno@outlook.com ",
            role = "aut",
            comment = c(ORCID = "CRIAR ORCID"))
            )
-Description: O objetivo do pacote hm é gerar uma tabela (data frame) com valores
-de altura manométrica e vazão. Estes valores, auxiliarão a compor uma curva 
-característica de sistemas de irrigação. A partir de um valor especifícado de 
-vazão, e fornecendo dados variados do sistema (como alturas e comprimentos), 
-a função gera um data frame com 5 valores, que representam respectivamente 
+Description: O objetivo do pacote hm e gerar uma tabela (data frame) com valores
+de altura manometrica e vazao. Estes valores, auxiliarão a compor uma curva 
+característica de sistemas de irrigacao. A partir de um valor especificado de 
+vazao, e fornecendo dados variados do sistema (como alturas e comprimentos), 
+a funcao gera um data frame com 5 valores, que representam respectivamente 
 30%, 60%, 100%, 150% e 200% da vazão especificada.
 License: MIT + file LICENSE
 Encoding: UTF-8
