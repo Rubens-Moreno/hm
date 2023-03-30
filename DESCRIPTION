@@ -1,5 +1,5 @@
-Package: hf
-Title: Calculate head loss in pipelines
+Package: hm (futuro PumpR)
+Title: Recomenda motobombas adequadas para sistemas de irrigação.
 Version: 0.0.0.9000
 Authors@R: c(
     person(given = "Joao B.",
@@ -7,15 +7,18 @@ Authors@R: c(
            email = "joao.tolentino@ufsc.br",
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-1303-4202")),
-    person(given = "Fernanda O.",
-           family = "Silva",
-           email = "nanda.52445@gmail.com ",
+    person(given = "Rubens M.",
+           family = "Simões",
+           email = "rubens.moreno@outlook.com ",
            role = "aut",
-           comment = c(ORCID = "0000-0001-7271-1678"))
+           comment = c(ORCID = "CRIAR ORCID"))
            )
-Description: In the design and analysis of piping, the three major pipe-flow problems are the
-    determination of head loss, flow rate and pipe diameter for a given set of known variables.
-    This package presents the implementation of functions to solve these three problems.
+Description: O objetivo do pacote hm é gerar uma tabela (data frame) com valores
+de altura manométrica e vazão. Estes valores, auxiliarão a compor uma curva 
+característica de sistemas de irrigação. A partir de um valor especifícado de 
+vazão, e fornecendo dados variados do sistema (como alturas e comprimentos), 
+a função gera um data frame com 5 valores, que representam respectivamente 
+30%, 60%, 100%, 150% e 200% da vazão especificada.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
