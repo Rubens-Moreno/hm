@@ -22,10 +22,3 @@ hmsis <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {
 
   return(list(df, model))
 }
-
-# #ajuste polinomial da curva_sistema
-# Model<-lm(formula = hm ~ q + I(q^2), data = curva_sistema)
-# Model
-
-curva_sistema[1]
-curva_sistema[2]
