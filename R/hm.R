@@ -1,4 +1,4 @@
-#' Função hm
+#' hm Function
 #'
 #' @param hr Altura de recalque
 #' @param hs Altura de sucção
