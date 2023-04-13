@@ -10,3 +10,4 @@
 #      main="6. Intercessao")
 # lines(x, pump_line(x), col="red", lwd="3", type="l")
 # points(rt$root, sis_line(rt$root), pch=16, cex=2)
+#
