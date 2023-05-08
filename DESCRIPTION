@@ -1,5 +1,5 @@
-Package: hf
-Title: Calculate head loss in pipelines
+Package: hm (futuro PumpR)
+Title: Recomenda motobombas adequadas para sistemas de irrigacao.
 Version: 0.0.0.9000
 Authors@R: c(
     person(given = "Joao B.",
@@ -7,15 +7,13 @@ Authors@R: c(
            email = "joao.tolentino@ufsc.br",
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-1303-4202")),
-    person(given = "Fernanda O.",
-           family = "Silva",
-           email = "nanda.52445@gmail.com ",
+    person(given = "Rubens M.",
+           family = "Simoes",
+           email = "rubens.moreno@outlook.com ",
            role = "aut",
-           comment = c(ORCID = "0000-0001-7271-1678"))
+           comment = c(ORCID = "CRIAR ORCID"))
            )
-Description: In the design and analysis of piping, the three major pipe-flow problems are the
-    determination of head loss, flow rate and pipe diameter for a given set of known variables.
-    This package presents the implementation of functions to solve these three problems.
+Description: O objetivo
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

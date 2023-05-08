@@ -6,10 +6,10 @@
 #' @export
 #'
 #' @examples
-#' curva_sistema <-  hmsis(
+#' curva_sistema <- hmsis(
 #'   hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148, rc = 0.0001,
 #'   ds_com = 75 / 1000, ls = 2, pes = 305
-#' )
+#'   )
 hmsis <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {
   qc <- c(0.3 * q, 0.6 * q, q, 1.5 * q, 2 * q)
   hmsis_v <- c()
@@ -22,3 +22,5 @@ hmsis <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {
 
   return(list(df, model))
 }
+
+

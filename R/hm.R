@@ -12,7 +12,7 @@
 #' @param pes Comprimento equivalente linha de succao
 #'
 #'
-#' @return numero
+#' @return Numero
 #' @export
 
 hm <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {
