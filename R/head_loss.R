@@ -3,10 +3,10 @@
 #' \code{headLoss} calculate the head loss by friction in pipes by different
 #' methods
 #'
-#' @param D  Diameter in meters
-#' @param Q  Flow rate in cubic meters per second
-#' @param L  Length of pipe in meters
-#' @param RC Roughness coefficient. Absolute roughness (in meters) for
+#' @param d  Diameter in meters
+#' @param q  Flow rate in cubic meters per second
+#' @param l  Length of pipe in meters
+#' @param rc Roughness coefficient. Absolute roughness (in meters) for
 #'           Universal equation.
 #' @param v  Kinematic viscosity of fluid in square meters per second. By
 #'           default use the value for water at 20 Celsius degree
@@ -19,20 +19,34 @@
 #'            Unnecessary for empirical or explicit equations.
 #'
 #' @return hf Head loss in meters
-
-head_loss <- function(D, Q, L, RC = 1e-6, v = 1.01e-6, g = 9.81, x1 = 0.06) {
+#' @export
+#' @examples
+#' head_loss(d = 0.025, q = 31e-6, l = 100, rc = 1e-4)
+head_loss <- function(d, q, l, rc = 1e-6, v = 1.01e-6, g = 9.81, x1 = 0.06) {
   # Reynolds number
-  Re <- (4 * Q) / (pi * D * v)
+  re <- (4 * q) / (pi * d * v)
 
-  ## laminar flow
-  if (Re < 2000) {
-    f <- 64 / Re
-    hf <- (16 * f * Q^2 * L) / (2 * g * pi^2 * D^5)
+  if (re < 2000) {
+    ## laminar flow
+    f <- 64 / re
+  } else if (re <= 4000) {
+    ## transition: interpolation (Dunlop, 1991)
+    y3 <- -0.86859 * log(rc / (3.7 * d) + 5.74 / 4000^0.9)
+    y2 <- rc / (3.7 * d) + 5.74 / re^0.9
+    fa <- y3^(-2)
+    fb <- fa * (2 - 0.00514215 / (y2 * y3))
+    r <- re / 2000
+    x1 <- 7 * fa - fb
+    x2 <- 0.128 - 17 * fa + 2.5 * fb
+    x3 <- -0.128 + 13 * fa - 2 * fb
+    x4 <- r * (0.032 - 3 * fa + 0.5 * fb)
+    f <- (x1 + r * (x2 + r * (x3 + x4)))
   } else {
-    # Colebrook-White
+    ## turbulent
+    ## Colebrook-White
     x1 <- (1 / x1)^0.5
-    w <- (RC / (3.7 * D)) + ((2.51 * x1) / Re)
-    h <- (2.18 / (((RC * Re) / (3.7 * D)) + (2.51 * x1)))
+    w <- (rc / (3.7 * d)) + ((2.51 * x1) / re)
+    h <- (2.18 / (((rc * re) / (3.7 * d)) + (2.51 * x1)))
 
     repeat {
       x2 <- x1 - (((x1 + (2 * log10(w))) / (1 + h)))
@@ -42,8 +56,9 @@ head_loss <- function(D, Q, L, RC = 1e-6, v = 1.01e-6, g = 9.81, x1 = 0.06) {
     }
 
     f <- 1 / x1^2
-    hf <- (16 * f * Q^2 * L) / (2 * g * pi^2 * D^5)
   }
+
+  hf <- (16 * f * q^2 * l) / (2 * g * pi^2 * d^5)
 
   return(hf)
 }
