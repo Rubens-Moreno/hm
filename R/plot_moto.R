@@ -12,7 +12,7 @@
 #' plot.bomba(curva_bomba)
 plot.bomba <- function(df) {
   plot(hm_bomba ~ q_bomba,
-       data = df[[1]],
+       data = curva_bomba[[1]],
        type = "b",
        lwd = 2,
        xlab = "Vazao - Q(m3/h)",
@@ -20,4 +20,10 @@ plot.bomba <- function(df) {
        main = "Curva Caracteristica da Bomba"
   )
 }
+
+# # ajuste polinomial da curva_bomba
+# model_pump <- function(Hm_BC21_15, Q_BC21_15, I) {
+#   lm(formula = Hm_BC21_15 ~ Q_BC21_15 + I(Q_BC21_15^2), data = curva_bomba)
+# }
+# model_pump(Hm_BC21_15, Q_BC21_15, I)
 

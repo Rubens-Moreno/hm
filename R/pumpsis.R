@@ -12,10 +12,9 @@
 #' curva_bomba <- pumpsis(Q_BC21_15, Hm_BC21_15)
 
 pumpsis <- function(q_bomba, hm_bomba) {
-  df <- data.frame(q_bomba, hm_bomba)
-    model <- lm(formula = hm_bomba ~ q_bomba + I(q_bomba^2), data = df)
+  df_pump <- data.frame(q_bomba, hm_bomba)
+  model_pump <- lm(formula = hm_bomba ~ q_bomba + I(q_bomba^2), data = df_pump)
 
-    return(list(df, model))
+    return(list(df_pump, model_pump))
 
   }
-

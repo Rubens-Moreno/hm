@@ -1,3 +1,35 @@
+
+# intersect point between sis and pump
+# model_sis <- function(hm,q,I) {
+#   lm(formula = hm ~ q + I(q^2), data = hmsis[[1]])
+# }
+# sis function
+# result_sis <- model_sis(hm,q,I)
+# func1 <- function(x)
+# {
+#   coef(result_sis)[[3]] * x^2 + coef(result_sis)[[2]] * x + coef(result_sis)[[2]]
+# }
+#
+# # pump function
+# result_pump <- model_pump(Hm_BC21_15, Q_BC21_15, I)
+# func2 <- function(x)
+# {
+#   coef(result_pump)[[3]] * x^2 + coef(result_pump)[[2]] * x + coef(result_pump)[[1]]
+#
+# }
+#
+# #uniroot
+# rt <- uniroot(function(x)  func1(x) - func2(x)  , interval=c(0,80), tol=1e-8)
+# #uniroot check
+# all.equal(func1(rt$root), func2(rt$root))
+#
+
+
+
+
+
+#new code
+
 # polyroot(curva_sistema[[2]]$coefficients - curva_bomba[[2]]$coefficients)
 #
 # 12,94 de vazao
@@ -6,7 +38,6 @@
 # root_dif <- polyroot(curva_sistema[[2]]$coefficients - curva_bomba[[2]]$coefficients)
 #
 # print(root_dif)
-
 
 
 

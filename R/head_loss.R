@@ -47,3 +47,4 @@ head_loss <- function(D, Q, L, RC = 1e-6, v = 1.01e-6, g = 9.81, x1 = 0.06) {
 
   return(hf)
 }
+

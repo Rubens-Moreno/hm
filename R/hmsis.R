@@ -7,9 +7,9 @@
 #'
 #' @examples
 #' curva_sistema <- hmsis(
-#'   hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148, rc = 0.0001,
-#'   ds_com = 75 / 1000, ls = 2, pes = 305
-#'   )
+#'  hr = 3, hs = 1, dr_com = 0.0352, q = 6.8, lr = 18, per = 148,
+#'  rc = 0.0001, ds_com = 0.0534, ls = 1, pes = 305
+#' )
 hmsis <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {
   qc <- c(0.3 * q, 0.6 * q, q, 1.5 * q, 2 * q)
   hmsis_v <- c()
@@ -17,10 +17,9 @@ hmsis <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {
     hmsis_v[i] <- hm(hr, hs, dr_com, qc[i], lr, per, rc, ds_com, ls, pes)
   }
 
-  df <- data.frame(q = qc, hm = hmsis_v)
-  model <- lm(formula = hmsis_v ~ qc + I(qc^2))
+  df_sis <- data.frame(q = qc, hm = hmsis_v)
+  model_sis <- lm(formula = hmsis_v ~ qc + I(qc^2))
 
-  return(list(df, model))
+  return(list(df_sis, model_sis))
 }
-
 

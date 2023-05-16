@@ -7,13 +7,13 @@
 #'
 #' @examples
 #' curva_sistema <- hmsis(
-#'   hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148, rc = 0.0001,
-#'   ds_com = 75 / 1000, ls = 2, pes = 305
+#'  hr = 3, hs = 1, dr_com = 0.0352, q = 6.8, lr = 18, per = 148,
+#'  rc = 0.0001, ds_com = 0.0534, ls = 1, pes = 305
 #' )
 #' plot.sistema(curva_sistema)
 plot.sistema <- function(df) {
   plot(hm ~ q,
-    data = df[[1]],
+    data = curva_sistema[[1]],
     type = "b",
     lwd = 2,
     xlab = "Vazao - Q(m3/h)",
@@ -22,3 +22,9 @@ plot.sistema <- function(df) {
   )
 }
 
+# # ajuste polinomial da curva_sistema[[1]]
+# model_sis <- function(hm,q,I) {
+#   lm(formula = hm ~ q + I(q^2), data = df)
+# }
+#
+# model_sis(hm,q,I)
