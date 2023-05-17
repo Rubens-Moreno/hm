@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # intersect point between sis and pump
 # model_sis <- function(hm,q,I) {
@@ -30,6 +31,8 @@
 
 #new code
 
+=======
+>>>>>>> 7a2ff741e7f34405d711172a0e69f8ca04d5d2dc
 # polyroot(curva_sistema[[2]]$coefficients - curva_bomba[[2]]$coefficients)
 #
 # 12,94 de vazao
