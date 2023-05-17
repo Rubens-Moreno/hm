@@ -9,7 +9,7 @@
 #' @examples
 #' q_pump <- c(19.2, 18.2, 17.2, 16.0, 13.3, 9.9)
 #' hm_pump <- c(9, 10, 11, 12, 14, 16)
-#' pump_curve <- pumpsis(Q_BC21_15, Hm_BC21_15)
+#' pump_curve <- pumpsis(q_pump, hm_pump)
 
 pumpsis <- function(q_pump, hm_pump) {
   df_pump <- data.frame(q_pump, hm_pump)

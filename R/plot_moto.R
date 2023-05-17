@@ -15,8 +15,8 @@ plot.pump <- function(df) {
        data = pump_curve[[1]],
        type = "b",
        lwd = 2,
-       xlab = "Vazao - Q(m3/h)",
-       ylab = "Altura manometrica - Hm (mca)",
-       main = "Curva Caracteristica da Bomba"
+       xlab = "Flow rate - Q(m3/h)",
+       ylab = "Manometric height - Hm (mca)",
+       main = "Characteristic curve of the pump"
   )
 }

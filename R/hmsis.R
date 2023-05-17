@@ -22,3 +22,4 @@ hmsis <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {
 
   return(list(df_sis, model_sis))
 }
+
