@@ -20,10 +20,3 @@ plot.bomba <- function(df) {
        main = "Curva Caracteristica da Bomba"
   )
 }
-
-# # ajuste polinomial da curva_bomba
-# model_pump <- function(Hm_BC21_15, Q_BC21_15, I) {
-#   lm(formula = Hm_BC21_15 ~ Q_BC21_15 + I(Q_BC21_15^2), data = curva_bomba)
-# }
-# model_pump(Hm_BC21_15, Q_BC21_15, I)
-

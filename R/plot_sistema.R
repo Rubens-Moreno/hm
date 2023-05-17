@@ -21,10 +21,3 @@ plot.sistema <- function(df) {
     main = "Curva Caracteristica do Sistema"
   )
 }
-
-# # ajuste polinomial da curva_sistema[[1]]
-# model_sis <- function(hm,q,I) {
-#   lm(formula = hm ~ q + I(q^2), data = df)
-# }
-#
-# model_sis(hm,q,I)
