@@ -1,21 +1,20 @@
-#
-# #plot da intercess?o
-# x <- seq(0, 20, length=100)
-# plot(x,
-#      func1(x),
-#      col="blue",
-#      type="l",
-#      lwd=3,
-#      xlab="Vazao - Q(m3/h)",
-#      ylab="Altura manometrica - Hm (mca)",
-#      main="6. Intercessao")
-# lines(x, func2(x), col="red", lwd="3", type="l")
-# points(rt$root, func1(rt$root), pch=16, cex=2)
-#
-# #ponto de intercess?o
-#
-# #func1(rt$root)
-# rt$root
-# #conferindo
-# func1(rt$root)
-# func2(rt$root)
+#plot da intercessao
+x <- seq(0, 20, length=100)
+plot(x,
+     func1(x),
+     col="blue",
+     type="l",
+     lwd=3,
+     xlab="Vazao - Q(m3/h)",
+     ylab="Altura manometrica - Hm (mca)",
+     main="6. Intercessao")
+lines(x, func2(x), col="red", lwd="3", type="l")
+points(rt$root, func1(rt$root), pch=16, cex=2)
+
+#ponto de intercess?o
+
+#func1(rt$root)
+rt$root
+#conferindo
+func1(rt$root)
+func2(rt$root)
