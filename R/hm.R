@@ -1,18 +1,18 @@
-#' hm Function
+#' hm Function to set manometric height
 #'
-#' @param hr Altura de recalque
-#' @param hs Altura de sucção
-#' @param dr_com Diâmetro comercial
-#' @param q Vazão
-#' @param lr Comprimento do recalque
-#' @param per Comprimento equivalente linha de recalque
-#' @param rc Coficiente de rugosidade
-#' @param ds_com diametro linha de succao
-#' @param ls comprimento da linha de succao
-#' @param pes Comprimento equivalente linha de succao
+#' @param hr Discharge height in meters
+#' @param hs Suction height in meters
+#' @param dr_com Commercial diameter in meters
+#' @param q Flow in cubic meters per second
+#' @param lr Length of the discharge line in meters
+#' @param per Length of special parts in the discharge line in meters
+#' @param rc Material roughness coefficient in meters
+#' @param ds_com Diameter of the suction line in meters
+#' @param ls Suction line length in meters
+#' @param pes Length of special parts in the suction line in meters
 #'
 #'
-#' @return Numero
+#' @return Number
 #' @export
 
 hm <- function(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes) {

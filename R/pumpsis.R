@@ -1,9 +1,9 @@
-#' Title
+#' Pump coefficients and data.frame of flow rates and manometric heights
 #'
-#' @param q_bomba Vazoes da motobomba
-#' @param hm_bomba Altura manometrica da motobomba
+#' @param q_bomba Pump flow rates
+#' @param hm_bomba Pump manometric heights
 #'
-#' @return Um data.frame
+#' @return List
 #' @export
 #'
 #' @examples

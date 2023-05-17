@@ -1,8 +1,8 @@
-#' Title
+#' Plot of characteristic curve of the system
 #'
-#' @param df Objeto resultado da funcao hmsis
+#' @param df System data.frame
 #'
-#' @return Um Plot da curva caracteristica do sistema
+#' @return Plot
 #' @export
 #'
 #' @examples

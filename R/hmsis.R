@@ -1,8 +1,8 @@
-#' Title
+#' System coefficients and data.frame of flow rates and manometric heights
 #'
 #' @inheritParams hm
 #'
-#' @return um data.frame
+#' @return List
 #' @export
 #'
 #' @examples

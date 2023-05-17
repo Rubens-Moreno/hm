@@ -1,8 +1,8 @@
-#' Title
+#' Plot of characteristic curve of the pump
 #'
-#' @param df Objeto resultado da funcao pumpsis
+#' @param df Pump data.frame
 #'
-#' @return Um Plot da curva caracteristica da motombomba
+#' @return Plot
 #' @export
 #'
 #' @examples
