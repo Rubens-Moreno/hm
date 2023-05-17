@@ -1,19 +1,19 @@
 #' Pump coefficients and data.frame of flow rates and manometric heights
 #'
-#' @param q_bomba Pump flow rates
-#' @param hm_bomba Pump manometric heights
+#' @param q_pump Pump flow rates
+#' @param hm_pump Pump manometric heights
 #'
 #' @return List
 #' @export
 #'
 #' @examples
-#' Q_BC21_15 <- c(19.2, 18.2, 17.2, 16.0, 13.3, 9.9)
-#' Hm_BC21_15 <- c(9, 10, 11, 12, 14, 16)
-#' curva_bomba <- pumpsis(Q_BC21_15, Hm_BC21_15)
+#' q_pump <- c(19.2, 18.2, 17.2, 16.0, 13.3, 9.9)
+#' hm_pump <- c(9, 10, 11, 12, 14, 16)
+#' pump_curve <- pumpsis(Q_BC21_15, Hm_BC21_15)
 
-pumpsis <- function(q_bomba, hm_bomba) {
-  df_pump <- data.frame(q_bomba, hm_bomba)
-  model_pump <- lm(formula = hm_bomba ~ q_bomba + I(q_bomba^2), data = df_pump)
+pumpsis <- function(q_pump, hm_pump) {
+  df_pump <- data.frame(q_pump, hm_pump)
+  model_pump <- lm(formula = hm_pump ~ q_pump + I(q_pump^2), data = df_pump)
 
     return(list(df_pump, model_pump))
 
