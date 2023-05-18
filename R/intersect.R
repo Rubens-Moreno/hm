@@ -48,6 +48,6 @@
 
 #NEW CODE
 
-root_dif <- polyroot(system_curve[[2]]$coefficients - pump_curve[[2]]$coefficients)
-
-print(root_dif)
+# root_dif <- polyroot(system_curve[[2]]$coefficients - pump_curve[[2]]$coefficients)
+#
+# print(root_dif)
