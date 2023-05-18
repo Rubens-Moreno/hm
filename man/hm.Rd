@@ -4,7 +4,7 @@
 \alias{hm}
 \title{Função hm}
 \usage{
-hm(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes)
+hm(hr, hs, dr_com, q, lr, per, ds_com, ls, pes)
 }
 \arguments{
 \item{hr}{Altura de recalque}
@@ -19,8 +19,6 @@ hm(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes)
 
 \item{per}{Comprimento equivalente linha de recalque}
 
-\item{rc}{Coficiente de rugosidade}
-
 \item{ds_com}{diametro linha de succao}
 
 \item{ls}{comprimento da linha de succao}
@@ -28,7 +26,7 @@ hm(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes)
 \item{pes}{Comprimento equivalente linha de succao}
 }
 \value{
-numero
+Numero
 }
 \description{
 Função hm

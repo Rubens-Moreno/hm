@@ -4,7 +4,7 @@
 \alias{hmsis}
 \title{Title}
 \usage{
-hmsis(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes)
+hmsis(hr, hs, dr_com, q, lr, per, ds_com, ls, pes)
 }
 \arguments{
 \item{hr}{Altura de recalque}
@@ -18,8 +18,6 @@ hmsis(hr, hs, dr_com, q, lr, per, rc, ds_com, ls, pes)
 \item{lr}{Comprimento do recalque}
 
 \item{per}{Comprimento equivalente linha de recalque}
-
-\item{rc}{Coficiente de rugosidade}
 
 \item{ds_com}{diametro linha de succao}
 
@@ -35,7 +33,7 @@ Title
 }
 \examples{
 hmsis(
-  hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148, rc = 0.0001,
+  hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148,
   ds_com = 75 / 1000, ls = 2, pes = 305
-)
+  )
 }

@@ -1,5 +1,5 @@
-Package: hm (futuro PumpR)
-Title: Recomenda motobombas adequadas para sistemas de irrigacao.
+Package: pumpr
+Title: Recomenda motobombas adequadas para sistemas de irrigacao
 Version: 0.0.0.9000
 Authors@R: c(
     person(given = "Joao B.",

@@ -4,16 +4,16 @@
 \alias{head_loss}
 \title{Head loss over the length of pipe}
 \usage{
-head_loss(D, Q, L, RC = 1e-06, v = 1.01e-06, g = 9.81, x1 = 0.06)
+head_loss(d, q, l, rc = 1e-06, v = 1.01e-06, g = 9.81, x1 = 0.06)
 }
 \arguments{
-\item{D}{Diameter in meters}
+\item{d}{Diameter in meters}
 
-\item{Q}{Flow rate in cubic meters per second}
+\item{q}{Flow rate in cubic meters per second}
 
-\item{L}{Length of pipe in meters}
+\item{l}{Length of pipe in meters}
 
-\item{RC}{Roughness coefficient. Absolute roughness (in meters) for
+\item{rc}{Roughness coefficient. Absolute roughness (in meters) for
 Universal equation.}
 
 \item{v}{Kinematic viscosity of fluid in square meters per second. By
@@ -34,4 +34,7 @@ hf Head loss in meters
 \description{
 \code{headLoss} calculate the head loss by friction in pipes by different
 methods
+}
+\examples{
+head_loss(d = 0.025, q = 31e-6, l = 100, rc = 1e-4)
 }

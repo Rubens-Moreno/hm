@@ -7,11 +7,11 @@
 #'
 #' @examples
 #' curva_sistema <- hmsis(
-#'   hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148, rc = 0.0001,
+#'   hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148,
 #'   ds_com = 75 / 1000, ls = 2, pes = 305
 #' )
-#' plot.sistema(curva_sistema)
-plot.sistema <- function(df) {
+#' plot_sys(curva_sistema)
+plot_sys <- function(df) {
   plot(hm ~ q,
     data = df[[1]],
     type = "b",

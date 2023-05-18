@@ -4,7 +4,7 @@
 #'
 #' @return um data.frame
 #' @export
-#'
+#' @importFrom stats lm
 #' @examples
 #' hmsis(
 #'   hr = 20, hs = 1, dr_com = 60 / 1000, q = 10 / 3600, lr = 50, per = 148,
@@ -18,7 +18,7 @@ hmsis <- function(hr, hs, dr_com, q, lr, per, ds_com, ls, pes) {
   }
 
   df <- data.frame(q = qc, hm = hmsis_v)
-  model <- lm(formula = hmsis_v ~ qc + I(qc^2))
+  model <- lm(formula = hmsis_v ~ poly(qc,2, raw = TRUE))
 
   return(list(df, model))
 }

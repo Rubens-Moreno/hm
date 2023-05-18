@@ -1,29 +1,21 @@
-# polyroot(curva_sistema[[2]]$coefficients - curva_bomba[[2]]$coefficients)
-#
-# 12,94 de vazao
-#
-#tentativa 1
-# root_dif <- polyroot(curva_sistema[[2]]$coefficients - curva_bomba[[2]]$coefficients)
-#
-# print(root_dif)
-
-
-
-
-# sis_line <- function(model_sis)
-# {
-#   model_sis$coefficients[3] * x^2 + model_sis$coefficients[2] * x + model_sis$coefficients[1]
-# }
-#
-# pump_line <- function(model_bom)
-# {
-#   model_bom$coefficients[3]  * x^2 + model_bom$coefficients[2] * x + model_bom$coefficients[1]
-# }
-#
-# rt <- uniroot(function(x)  sis_line(x) - pump_line(x)  , interval=c(0,80), tol=1e-8)
-# all.equal(sis_line(rt$root), pump_line(rt$root))
-#
-# rt$root
-#
-# sis_line(rt$root)
-# pump_line(rt$root)
+#' intersect
+#'
+#' ponto de interseccao entre as curvas do sistema e da bomba
+#'
+#' @param hmsis objeto criado pela funcao hmsis
+#' @param hmpump objeto criado pela funcao hmpump
+#' @export
+#'
+#' @examples
+#' Q_BC21_15 <- c(19.2, 18.2, 17.2, 16.0, 13.3, 9.9) / 3600
+#' Hm_BC21_15 <- c(9, 10, 11, 12, 14, 16)
+#' curva_bomba <- hmpump(Q_BC21_15, Hm_BC21_15)
+#' curva_sis <- hmsis(
+#'   hr = 7, hs = 1, dr_com = 60 / 1000, q = 15 / 3600, lr = 50, per = 148,
+#'   ds_com = 75 / 1000, ls = 2, pes = 305
+#' )
+#' intersect_pump(curva_sis, curva_bomba)
+intersect_pump <- function(hmsis, hmpump) {
+  a <- polyroot(hmsis[[2]]$coefficients - hmpump[[2]]$coefficients)
+  return(Re(a)[Re(a) > 0])
+}
